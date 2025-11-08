@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Playwrite+DE+SAS&display=swap" rel="stylesheet">
+    <style>
+        /* Reset dasar untuk konsistensi */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #F5FCFC;
+        }
+
+        .container {
+            background-color: #FAF2F2;
+            border: 2px solid rgb(221, 221, 221);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 90%;
+            text-align: left; /* Teks rata kiri secara default */
+        }
+
+        /* Hover effect pada container */
+        .container:hover {
+            transform: scale(1.02);
+            transition: transform 0.3s ease;
+        }
+
+        .biodata {
+            /* Hapus flexbox, gunakan float seperti asli */
+        }
+
+        img {
+            width: 200px;
+            float: right; /* Foto di kanan di desktop */
+            border-radius: 6pc;
+            box-shadow: 0 5px 60px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-family: "Playwrite DE SAS", cursive;
+            font-weight: 400;
+            font-style: normal;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            margin-bottom: 15px;
+        }
+
+        li {
+            list-style: none;
+            margin-bottom: 5px;
+        }
+
+        button {
+            align-items: end;
+            border-style: none;
+            background-color: #ffffff;
+            padding: 10px;
+            font-size: 15px;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        /* Clear float untuk hindari overlap */
+        .biodata::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsivitas di mobile */
+        @media (max-width: 600px) {
+            .container {
+                text-align: left; /* Ubah ke kiri, bukan center */
+                padding: 15px;
+            }
+
+            img {
+                width: 150px; /* Gambar lebih kecil */
+                float: left; /* Foto di kiri di mobile */
+                margin-right: 15px; /* Jarak ke teks */
+                margin-bottom: 10px; /* Jarak bawah jika teks panjang */
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            p, ul, li {
+                font-size: 14px;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="biodata">
+            <img src="ambatukam.jpeg" alt="foto">
+            <h2>Mas Ambatukam</h2>
+            <p>Saya adalah seorang Pelajar SMK Negeri 1 Ngawi dan newbie Web development</p>
+            <br>
+            <p><b>Hobby saya adalah :</b></p>
+            <ul>
+                <li>Coding</li>
+                <li>Bermain Game</li>
+                <li>Menyanyi</li>
+            </ul>
+            <button>Click Me!</button>
+        </div>
+    </div>
+</body>
+</html>
